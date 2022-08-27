@@ -1,7 +1,7 @@
 # предполагаю, что текст уже обработан (нет знаков препинания, переноса строк, заглавных букв)
 
 def wordProcess(txtName, encod):
-    parsedText = open(txtName, encoding = encod) # кодировку, наверное можно убрать, у меня просто проблемы были 
+    parsedText = open(txtName, encoding = encod) # кодировку, наверное можно убрать, у меня просто проблемы были
     
     uniqueWords = []
     uniqueProc = []
@@ -27,13 +27,10 @@ def wordProcess(txtName, encod):
                 onceWords.remove(word)
                 onceCounter -= 1
                 onceProc.append(onceCounter)
+            else: onceProc.append(onceCounter)
 
             wordCounter += 1
             
     parsedText.close()
     return uniqueProc, onceProc
-
-
-
-
 
